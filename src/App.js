@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([]); // empty array to give the tasks to  // By default the tasks array is empty 
-  const [intervals, setIntervals] = useState([]);  
+  const [intervals, setIntervals] = useState([]);  // time control
 
   const addTask = (title, countdown) => {
     const newTask = {
