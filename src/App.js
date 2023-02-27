@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import "./App.css";
 
 function App() {
+  const [tasks, setTasks] = useState([]); // empty array to give the tasks to  // By default the tasks array is empty 
+  const [intervals, setIntervals] = useState([]);  
+
+  const addTask = (title, countdown) => {
+    const newTask = {
+      id: tasks.length + 1,
+      title,
+      countdown,
+      done: false,
+      timeLeft: countdown,
+    };
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Efe's Todo List with Countdown</h1>
+      <TodoForm onAddTask={addTask} />
+      <TodoList tasks={tasks} />
     </div>
   );
 }

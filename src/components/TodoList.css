@@ -1,0 +1,49 @@
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px 10px 10px; /* added padding-right for the countdown */
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .list li.done {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .list li.pending {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .list li span {
+    font-size: 18px;
+    position: absolute;
+    right: 10px; /* position the countdown timer to the right */
+  }
+  
+  .list li button {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list li button:hover {
+    background-color: #c82333;
+  }
+  

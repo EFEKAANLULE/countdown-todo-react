@@ -1,0 +1,40 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  
+  .input-group input {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group input:focus {
+    outline: none;
+  }
+  
+  .input-group button {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-group button:hover {
+    background-color: #0062cc;
+  }
+  
