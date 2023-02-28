@@ -15,7 +15,10 @@ function App() {
       done: false,
       timeLeft: countdown,
     };
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+
   }
+  
 
   return (
     <div className="App">
